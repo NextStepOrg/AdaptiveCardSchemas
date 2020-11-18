@@ -1,0 +1,173 @@
+{
+    "type": "AdaptiveCard",
+    "body": [
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "size": "Large",
+                    "weight": "Bolder",
+                    "text": "${title}",
+                    "wrap": true,
+                    "id": "title"
+                }
+            ],
+            "padding": "Default",
+            "spacing": "None",
+            "separator": true
+        },
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "id": "Error Summary",
+                    "text": "Please check out script on DC1 to determine why its failing",
+                    "wrap": true
+                },
+                {
+                    "type": "TextBlock",
+                    "id": "ErrSumm",
+                    "text": "${ErrSumm}",
+                    "wrap": true
+                }
+            ],
+            "padding": {
+                "top": "None",
+                "bottom": "Default",
+                "left": "Default",
+                "right": "Default"
+            },
+            "spacing": "None",
+            "id": ""
+        },
+        {
+            "type": "Container",
+            "spacing": "None",
+            "items": [
+                {
+                    "type": "Container",
+                    "id": "b149e1cc-0414-662b-6435-ad68d851bf67",
+                    "padding": "Default",
+                    "items": [
+                        {
+                            "type": "ColumnSet",
+                            "spacing": "None",
+                            "style": "emphasis",
+                            "columns": [
+                                {
+                                    "type": "Column",
+                                    "items": [
+                                        {
+                                            "type": "TextBlock",
+                                            "weight": "Bolder",
+                                            "text": "Error Details",
+                                            "wrap": true,
+                                            "spacing": "None"
+                                        }
+                                    ],
+                                    "width": "stretch",
+                                    "spacing": "None",
+                                    "padding": "None"
+                                },
+                                {
+                                    "type": "Column",
+                                    "id": "ActivityHistoryChevronDown",
+                                    "items": [
+                                        {
+                                            "type": "Image",
+                                            "selectAction": {
+                                                "type": "Action.ToggleVisibility",
+                                                "id": "ExpandActivityHistory",
+                                                "title": "Expand Activity History",
+                                                "targetElements": [
+                                                    "ActivityHistoryWrapper",
+                                                    "ActivityHistoryChevronUp",
+                                                    "ActivityHistoryChevronDown"
+                                                ]
+                                            },
+                                            "url": "https://amdesigner.azurewebsites.net/samples/assets/Down.png",
+                                            "width": "20px",
+                                            "altText": "Expand",
+                                            "height": "20px"
+                                        }
+                                    ],
+                                    "width": "auto",
+                                    "spacing": "None",
+                                    "padding": "None"
+                                },
+                                {
+                                    "type": "Column",
+                                    "id": "ActivityHistoryChevronUp",
+                                    "isVisible": false,
+                                    "items": [
+                                        {
+                                            "type": "Image",
+                                            "selectAction": {
+                                                "type": "Action.ToggleVisibility",
+                                                "id": "CollapseActivityHistory",
+                                                "title": "Collapse Activity History",
+                                                "targetElements": [
+                                                    "ActivityHistoryWrapper",
+                                                    "ActivityHistoryChevronUp",
+                                                    "ActivityHistoryChevronDown"
+                                                ]
+                                            },
+                                            "url": "https://amdesigner.azurewebsites.net/samples/assets/Up.png",
+                                            "width": "20px",
+                                            "altText": "Collapse",
+                                            "height": "20px"
+                                        }
+                                    ],
+                                    "width": "auto",
+                                    "padding": "None"
+                                }
+                            ],
+                            "padding": "None"
+                        }
+                    ],
+                    "spacing": "None",
+                    "style": "emphasis",
+                    "separator": true,
+                    "selectAction": {
+                        "type": "Action.ToggleVisibility",
+                        "targetElements": [
+                            "ActivityHistoryWrapper",
+                            "ActivityHistoryChevronUp",
+                            "ActivityHistoryChevronDown"
+                        ],
+                        "id": "ExpandActivityHistory",
+                        "title": "Expand Activity History"
+                    }
+                },
+                {
+                    "type": "Container",
+                    "id": "ActivityHistoryWrapper",
+                    "isVisible": false,
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "id": "ErrDets",
+                            "text": "${ErrDets}",
+                            "wrap": true
+                        }
+                    ],
+                    "padding": {
+                        "top": "Default",
+                        "bottom": "Large",
+                        "left": "Default",
+                        "right": "Default"
+                    },
+                    "spacing": "None",
+                    "separator": true
+                }
+            ],
+            "padding": "None",
+            "separator": true
+        }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.0",
+    "padding": "None"
+}
